@@ -7,6 +7,12 @@ const addStudents=(req,res)=>{
     //Add data
     res.status(201).json({message:"Data added successfully"});
 }
+const newStudents=(req,res)=>{
+    //Add data
+    const mydata=req.body;
+    console.log(mydata);
+    res.status(201).json({message:"Data added successfully"});
+}
 const updateStudents=(req,res)=>{
     //Update data
     let updatedData={name:"Sai Durga Anisetti",roll:"23P31A0502"};
@@ -16,4 +22,4 @@ const deleteStudents=(req,res)=>{
     //Delete data
     res.status(200).json({message:"Data deleted successfully"});
 }
-export {getStudents,addStudents,updateStudents,deleteStudents};
+export {getStudents,addStudents,updateStudents,deleteStudents,newStudents};
